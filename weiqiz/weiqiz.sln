@@ -10,6 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeiqiUX", "WeiqiUX\WeiqiUX.
 		{BE4B3029-15A2-404A-8113-A936A7E1B233} = {BE4B3029-15A2-404A-8113-A936A7E1B233}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProblemUtils", "ProblemTree\ProblemUtils.csproj", "{3B130C26-E992-4EF0-AB6C-44F550E0D38C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BE4B3029-15A2-404A-8113-A936A7E1B233} = {BE4B3029-15A2-404A-8113-A936A7E1B233}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +39,14 @@ Global
 		{58AC8903-0F89-42A2-B6E6-ABE3EC52607D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58AC8903-0F89-42A2-B6E6-ABE3EC52607D}.Release|x86.ActiveCfg = Release|Any CPU
 		{58AC8903-0F89-42A2-B6E6-ABE3EC52607D}.Release|x86.Build.0 = Release|Any CPU
+		{3B130C26-E992-4EF0-AB6C-44F550E0D38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B130C26-E992-4EF0-AB6C-44F550E0D38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B130C26-E992-4EF0-AB6C-44F550E0D38C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3B130C26-E992-4EF0-AB6C-44F550E0D38C}.Debug|x86.Build.0 = Debug|Any CPU
+		{3B130C26-E992-4EF0-AB6C-44F550E0D38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B130C26-E992-4EF0-AB6C-44F550E0D38C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B130C26-E992-4EF0-AB6C-44F550E0D38C}.Release|x86.ActiveCfg = Release|Any CPU
+		{3B130C26-E992-4EF0-AB6C-44F550E0D38C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

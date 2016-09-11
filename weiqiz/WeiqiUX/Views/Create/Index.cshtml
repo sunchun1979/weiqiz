@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Creating";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<script type="text/javascript">
+    function resize_canvas(){
+        canvas = document.getElementById("canvas");
+        //if (canvas.width  < window.innerWidth)
+        {
+            canvas.width  = window.innerWidth * 0.8;
+        }
+
+        //if (canvas.height < window.innerHeight)
+        {
+            canvas.height = window.innerHeight * 0.8;
+        }
+    }
+    window.addEventListener('resize', resize_canvas, false);
+</script>
+
+<canvas id="canvas" style="border:1px solid #d3d3d3; background-color: rgb(248, 223, 102)">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+
