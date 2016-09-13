@@ -1,6 +1,7 @@
-﻿function resize_canvas() {
-    canvas = document.getElementById("canvas");
-    canvasdiv = document.getElementById("canvasdiv");
+﻿function draw() {
+    var canvas = document.getElementById("canvas");
+    var context2d = canvas.getContext('2d');
+    var canvasdiv = document.getElementById("canvasdiv");
     
     var wHeight = window.innerHeight;
     var wWidth = window.innerWidth;
@@ -14,5 +15,15 @@
     //drawsize = Math.min(width, height)*0.9;
     canvas.width = drawSize;
     canvas.height = drawSize;
+
+    context2d.strokeStyle = '#000000';
+    context2d.moveTo(0, 0);
+    context2d.lineTo(100, 100);
+    context2d.lineWidth = 10;
+    context2d.stroke();
+
+    var cellsize = drawSize / 25;
+
 }
-window.addEventListener('resize', resize_canvas, false);
+
+window.addEventListener('resize', draw, false);

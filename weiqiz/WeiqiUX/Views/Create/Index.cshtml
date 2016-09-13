@@ -4,16 +4,79 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2>Index</h2>
-<script type="text/javascript" src="~/Scripts/Weiqi/drawboard.js">
-</script>
 
 <div id="canvasdiv">
-    <canvas id="canvas" style="border:1px solid #d3d3d3; background-color: rgb(248, 223, 102)">
+    <canvas id="canvas" style="border:1px solid #d3d3d3; background-color: #d8b674">
         Your browser does not support the HTML5 canvas tag.
     </canvas>
 </div>
+<select class="form-control">
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+    <option value="four">Four</option>
+    <option value="five">Five</option>
+</select>
 
-<script>resize_canvas();</script>
 
+
+@*<script type="text/javascript" src="~/Scripts/Weiqi/drawboard.js">
+</script>
+
+<script type="text/javascript">draw();</script>*@
+
+<script type="text/javascript">
+    function draw() {
+        var canvas = document.getElementById("canvas");
+        var canvasdiv = document.getElementById("canvasdiv");
+
+        var wHeight = window.innerHeight;
+        var wWidth = window.innerWidth;
+        var offsets = canvasdiv.getBoundingClientRect();
+
+        var modifiedHeight = wHeight - 2 * offsets.top - 50;
+        var modifiedWidth = wWidth - 2 * offsets.left;
+        var drawSize = Math.min(modifiedHeight, modifiedWidth);
+
+        //canvasdiv.height = wHeight;
+        //drawsize = Math.min(width, height)*0.9;
+        canvas.width = drawSize;
+        canvas.height = drawSize;
+        var ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 1;
+
+        var cellSize = drawSize / 20;
+        var xshift = cellSize;
+        var yshift = cellSize;
+        for (var i = 0; i < 19; i++) {
+            var x0 = cellSize * i;
+            var y0 = 0;
+            var x1 = cellSize * i;
+            var y1 = cellSize * 18;
+            ctx.beginPath();
+            ctx.moveTo(x0 + xshift, y0 + yshift);
+            ctx.lineTo(x1 + xshift, y1 + yshift);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(y0 + xshift, x0 + yshift);
+            ctx.lineTo(y1 + xshift, x1 + yshift);
+            ctx.stroke();
+            ctx.closePath();
+        }
+        //ctx.fillStyle = "rgb(248, 223, 102)";
+        //ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    }
+
+    window.addEventListener('resize', draw, false);
+
+    draw();
+
+</script>
 
