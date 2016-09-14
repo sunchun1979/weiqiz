@@ -7,19 +7,21 @@
 
 <h2>Index</h2>
 
+<div class="btn-group">
+    <button type="button" id="btnPlay" class="btn btn-default" style="background-color:blue; color:white" disabled="disabled" onclick="switchMode()">Play</button>
+    <button type="button" id="btnSetup" class="btn btn-default" style="background-color:white; color:black" onclick="switchMode()">Setup</button>
+</div>
+
+<div class="btn-group">
+    <button type="button" id="test" class="btn btn-default">Test</button>
+</div>
+
+<br />
 <div id="canvasdiv">
     <canvas id="canvas" style="border:1px solid #d3d3d3; background-color: #d8b674">
         Your browser does not support the HTML5 canvas tag.
     </canvas>
 </div>
-<select class="form-control">
-    <option value="one">One</option>
-    <option value="two">Two</option>
-    <option value="three">Three</option>
-    <option value="four">Four</option>
-    <option value="five">Five</option>
-</select>
-
 
 
 @*<script type="text/javascript" src="~/Scripts/Weiqi/drawboard.js">
@@ -28,6 +30,25 @@
 <script type="text/javascript">draw();</script>*@
 
 <script type="text/javascript">
+
+    function switchMode() {
+        var btn1 = document.getElementById("btnPlay");
+        var btn2 = document.getElementById("btnSetup");
+        if (btn1.disabled) {
+            btn1.style.backgroundColor = "white";
+            btn1.style.color = "black";
+            btn2.style.backgroundColor = "blue";
+            btn2.style.color = "white";
+        } else {
+            btn2.style.backgroundColor = "white";
+            btn2.style.color = "black";
+            btn1.style.backgroundColor = "blue";
+            btn1.style.color = "white";
+        }
+        btn1.disabled = !btn1.disabled;
+        btn2.disabled = !btn2.disabled;
+    }
+
     function draw() {
         var canvas = document.getElementById("canvas");
         var canvasdiv = document.getElementById("canvasdiv");
@@ -71,7 +92,6 @@
         }
         //ctx.fillStyle = "rgb(248, 223, 102)";
         //ctx.fillRect(0, 0, canvas.width, canvas.height);
-
     }
 
     window.addEventListener('resize', draw, false);
