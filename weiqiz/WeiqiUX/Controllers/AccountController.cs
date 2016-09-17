@@ -338,7 +338,7 @@ namespace WeiqiUX.Controllers
                 var email = emailClaim.Value;
                 TempData["firstName"] = givenNameClaim.Value;
                 TempData["lastName"] = lastNameClaim.Value;
-                return RedirectToAction("About", "Home");
+                // return RedirectToAction("About", "Home");
             }
 
             // Sign in the user with this external login provider if the user already has a login
