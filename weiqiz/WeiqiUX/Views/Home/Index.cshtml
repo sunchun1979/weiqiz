@@ -45,6 +45,67 @@
 
 <link rel="stylesheet" type="text/css" href="~/Scripts/wgo/wgo.player.css" />
 
-<div data-wgo="(;PB[Black]PW[White]" class="player" data-wgo-layout="top: [], right: [], left: [], bottom: []" id="player">
+<div data-wgo="(;PB[Black]PW[White]" class="player" data-wgo-layout="top:['Control'], bottom:[]" id="player">
     Your browser doesn't support WGo Player. Use some modern browser like IE9, Google Chrome or Mozzila Firefox.
 </div>
+
+<input class="btn btn-default" type="button" value="Input" onclick="getgame()">
+
+<script type="text/javascript">
+    function getgame()
+    {
+        /*
+        var used = [];
+        var elements = null;
+
+        //get all elements
+        if (typeof document.getElementsByTagName != 'undefined') {
+            elements = document.getElementsByTagName('*');
+        }
+
+        if (!elements || !elements.length) {
+            elements = document.all; // ie5
+        }
+
+        //loop over all element
+        for (var i = 0; i < elements.length; i++) {
+
+            //loop over element's classes
+            var classes = elements[i].className.split(' ');
+            for (var j = 0; j < classes.length; j++) {
+
+                var name = classes[j];
+
+                //add if not exists
+                if (name.length > 0 && used.indexOf(name) === -1) {
+                    used.push(name);
+                }
+            }
+        }
+
+        alert(used.join(' '));
+        */
+
+        var board = document.getElementsByClassName("player");
+        var currentBoard = board.player._wgo_player.kifuReader.game.position.schema;
+        var white = 'W: ';
+        var black = 'B: ';
+        for (var i = 0; i < 19; i++) {
+            for (var j = 0; j < 19; j++) {
+                var p = i * 19 + j;
+                if (currentBoard[p] == 1)
+                {
+                    black += '(' + i + ', ' + j + '); ';
+                } else if (currentBoard[p] == -1)
+                {
+                    white += '(' + i + ', ' + j + '); ';
+                }
+            }
+        }
+        window.alert(black + white);
+        //editbutton.click();
+        //board.player.childNodes[3].childNodes[1].click();
+        //window.alert(hhhh)
+        //window.alert(board.player.dataset.wgo);
+    }
+</script>
