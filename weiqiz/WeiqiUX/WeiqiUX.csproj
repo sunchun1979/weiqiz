@@ -284,17 +284,39 @@
     <Content Include="Scripts\wgo\basicplayer.control.js" />
     <Content Include="Scripts\wgo\basicplayer.infobox.js" />
     <Content Include="Scripts\wgo\basicplayer.js" />
+    <Content Include="Scripts\wgo\black_128.png" />
+    <Content Include="Scripts\wgo\black_64.png" />
     <Content Include="Scripts\wgo\kifu.js" />
     <Content Include="Scripts\wgo\player.editable.js" />
+    <Content Include="Scripts\wgo\player.fullscreen.js" />
     <Content Include="Scripts\wgo\player.js" />
     <Content Include="Scripts\wgo\player.permalink.js" />
     <Content Include="Scripts\wgo\scoremode.js" />
     <Content Include="Scripts\wgo\sgfparser.js" />
+    <Content Include="Scripts\wgo\stones\black00_128.png" />
+    <Content Include="Scripts\wgo\stones\black01_128.png" />
+    <Content Include="Scripts\wgo\stones\black02_128.png" />
+    <Content Include="Scripts\wgo\stones\black03_128.png" />
+    <Content Include="Scripts\wgo\stones\white00_128.png" />
+    <Content Include="Scripts\wgo\stones\white01_128.png" />
+    <Content Include="Scripts\wgo\stones\white02_128.png" />
+    <Content Include="Scripts\wgo\stones\white03_128.png" />
+    <Content Include="Scripts\wgo\stones\white04_128.png" />
+    <Content Include="Scripts\wgo\stones\white05_128.png" />
+    <Content Include="Scripts\wgo\stones\white06_128.png" />
+    <Content Include="Scripts\wgo\stones\white07_128.png" />
+    <Content Include="Scripts\wgo\stones\white08_128.png" />
+    <Content Include="Scripts\wgo\stones\white09_128.png" />
+    <Content Include="Scripts\wgo\stones\white10_128.png" />
     <Content Include="Scripts\wgo\wgo.js" />
     <Content Include="Scripts\wgo\wgo.min.js" />
     <Content Include="Scripts\wgo\wgo.player.css" />
     <Content Include="Scripts\wgo\wgo.player.min.js" />
+    <Content Include="Scripts\wgo\white_128.png" />
+    <Content Include="Scripts\wgo\white_64.png" />
     <Content Include="Scripts\wgo\wood1.jpg" />
+    <Content Include="Scripts\wgo\wood_1024.jpg" />
+    <Content Include="Scripts\wgo\wood_512.jpg" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -331,6 +353,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Create\Index.cshtml" />
+    <Content Include="Views\Create\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
